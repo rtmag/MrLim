@@ -13,7 +13,9 @@ strandSpecific=1,
 isPairedEnd=FALSE,
 autosort=TRUE,
 nthreads=15,
-GTF.attrType="gene_name"
+GTF.featureType="miRNA", 
+GTF.attrType="miRNA",
+useMetaFeatures=FALSE
 )
 
 dat=data[[1]]
