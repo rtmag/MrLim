@@ -66,3 +66,18 @@ STAR --genomeDir /logical_dev/resources/star_mm10_noanno/ \
 --readFilesIn /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed/RMH3994_MS001-SR-R00549-NoIndex_S1_L001_R1_001_trimmed.fq.gz \
  --outSAMtype BAM SortedByCoordinate --outFileNamePrefix /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/bam/RMH3994_10MM_e2e_ 
 ###############################################################################################################
+# Aligment 5% MM noE2E noINS noDEL
+STAR --genomeDir /logical_dev/resources/star_mm10_noanno/ \
+--readFilesCommand zcat --runThreadN 12 \
+--outFilterMismatchNoverLmax 0.10 --outFilterMatchNmin 16 --outFilterScoreMinOverLread 0 \
+--outFilterMatchNminOverLread 0 --alignIntronMax 1 --scoreInsOpen -999 --scoreDelOpen -999 \
+--readFilesIn /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed/RMH3993_MS001-SR-R00548-NoIndex_S1_L001_R1_001_trimmed.fq.gz \
+ --outSAMtype BAM SortedByCoordinate --outFileNamePrefix /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/bam/RMH3993_5MM_noINS_noDEL
+
+STAR --genomeDir /logical_dev/resources/star_mm10_noanno/ \
+--readFilesCommand zcat --runThreadN 12 \
+--outFilterMismatchNoverLmax 0.10 --outFilterMatchNmin 16 --outFilterScoreMinOverLread 0 \
+--outFilterMatchNminOverLread 0 --alignIntronMax 1 --scoreInsOpen -999 --scoreDelOpen -999 \
+--readFilesIn /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed/RMH3994_MS001-SR-R00549-NoIndex_S1_L001_R1_001_trimmed.fq.gz \
+ --outSAMtype BAM SortedByCoordinate --outFileNamePrefix /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/bam/RMH3994_5MM_noINS_noDEL 
+###############################################################################################################
