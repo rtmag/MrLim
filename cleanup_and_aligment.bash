@@ -7,6 +7,14 @@ trim_galore --illumina -o /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed/ \
 trim_galore --illumina -o /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed/ \
 /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/RMH3994/RMH3994_MS001-SR-R00549-NoIndex_S1_L001_R1_001.fastq.gz
 #############################################################################################################
+# Adapter removel
+# "AGATCGGAAGAGC" adapter sequence
+trim_galore -o /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed2/ \
+/home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/RMH3993/RMH3993_MS001-SR-R00548-NoIndex_S1_L001_R1_001.fastq.gz
+
+trim_galore -o /home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/trimmed2/ \
+/home/rtm/CSI/mrLim/2018_05_17_13_50_30_833/RMH3994/RMH3994_MS001-SR-R00549-NoIndex_S1_L001_R1_001.fastq.gz
+#############################################################################################################
 # Genome index Preparation
 STAR --runThreadN 5 --runMode genomeGenerate --genomeDir \
 /logical_dev/resources/star_hg38_noAnnotation \
